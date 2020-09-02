@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/reset.min.css" />
+    <link rel="stylesheet" href="./css//index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- Inputs -->
+      <section>
+        <h1>Añadir articulo</h1>
+        <form id="add-article" class="inputs-wrapper">
+          <!-- Nombre  -->
+          <label for="article">
+            <h2>Nombre:</h2>
+            <input
+              autocomplete="off"
+              id="article-input"
+              name="article"
+              type="text"
+            />
+          </label>
+          <!-- Precio  -->
+          <label for="price">
+            <h2>Precio (kg):</h2>
+            <input
+              autocomplete="off"
+              id="price-input"
+              name="price"
+              type="number"
+            />
+          </label>
+          <!-- Gramos a gastar  -->
+          <label for="gr">
+            <h2>Gramos a gastar:</h2>
+            <input autocomplete="off" id="gr-input" name="gr" type="number" />
+          </label>
+          <button id="add" type="submit">Añadir</button>
+        </form>
+      </section>
+      <!-- Lista -->
+      <section id="article-list" class="articles-list">
+        <h1>Lista</h1>
+        <div id="list" class="list"></div>
+      </section>
+      <!-- Cuenta total  -->
+      <section class="total-amount">
+        <h1>Total</h1>
+        <!-- Conversor  -->
+        <form autocomplete="off" id="dollar-conversor" class="inputs-wrapper conversor">
+          <div class="amount">
+            <!-- Total en BS  -->
+            <h2>Bs: <span id="total-amount"></span></h2>
+            <!-- Total en $  -->
+            <h2>$: <span id="dolar-amount"></span></h2>
+          </div>
+          <label>
+            <input
+              id="dolar-price"
+              type="text"
+              placeholder="Precio del dolar"
+            />
+            <button type="submit" id="convert-price" class="convert-price">
+              Convertir
+            </button>
+          </label>
+        </form>
+        <!-- Percentaje -->
+        <form class="inputs-wrapper percentaje">
+          <label>
+            <h2 class="ganancia">
+              Ganancia: <span id="total-percentaje"></span>
+            </h2>
+            <input id="percentaje" type="text" placeholder="%" />
+            <button type="button" id="percentaje-button" class="convert-price">
+              Calcular
+            </button>
+          </label>
+        </form>
+      </section>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/Article.js"></script>
+    <script type="module" src="./js/Form.js"></script>
+    <script type="module" src="./js/htmlElements.js"></script>
+  </body>
+</html>
